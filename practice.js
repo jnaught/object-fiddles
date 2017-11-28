@@ -9,7 +9,10 @@
   //Code here
 
 
-
+let me = {
+  name: 'Aaron',
+  age: 43
+}
 
 
 
@@ -22,17 +25,27 @@
 
   //Code here
 
+let favoriteThings ={
+  band: 'Florida Georgia Line',
+  food: 'Bacon',
+  person: 'Shannon',
+  book: 'A smarter way to learn Javascript',
+  movie: 'Independance Day',
+  holiday: "All are my favorites!"
+}
 
 
 
 
 
-
-//After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
+//After you've made your object, add another key named 'car' with the value being your favorite 
+//car and then another key named 'brand' with the value being your favorite brand.
 
   //Code here
 
-
+favoriteThings.car = 'Impala';
+favoriteThings.brand = 'Chevy';
+console.log(favoriteThings)
 
 
 
@@ -40,7 +53,8 @@
 
   //Code here
 
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 
 
@@ -60,7 +74,10 @@ that is named color, with the value being the color of your backpack.
 
   //Code here
 
-
+let backPack = {};
+let item = 'firstPocket';
+backPack[item] = 'chapstick';
+backPack.color = 'blue';
 
 
 
@@ -69,7 +86,7 @@ that is named color, with the value being the color of your backpack.
 
   //Code here
 
- 
+ //alert(backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -80,7 +97,7 @@ Instead, console.log your whole backPack object and then check out the console.
   //Code here
 
 
-
+console.log(backPack);
 
 
 //NEXT PROBLEM
@@ -102,7 +119,8 @@ var user2 = {
   //Code Here
 
 
-
+user2.name = 'Tyler S. McGinnis';
+user2.email = 'tyler.mcginnis@devmounta.in';
 
 
 // =============================================
@@ -123,6 +141,7 @@ var user2 = {
 
   //Code Here
 
+let methodCollection={};
 
 
 
@@ -135,7 +154,8 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
 
-
+methodCollection.alertHello = function(){alert('hello');};
+methodCollection.logHello = function(){console.log('hello');};
 
 
 //Now call your alertHello and logHello methods.
@@ -143,7 +163,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
 
+methodCollection.alertHello();
 
+methodCollection.logHello();
 
 
 
@@ -159,8 +181,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
 
-
-
+let makePerson = (name,birthday,ssn) => {
+ return newObj={
+  name,
+  birthday,
+  ssn,
+  }
+};
+makePerson('Aaron','04/17/1975',555555555);
 
   
 
@@ -169,8 +197,18 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 
 
-// Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
+// Create a function called makeCard which takes in cardNumber, expirationDate, 
+//and securityCode to make a Credit Card object and returns that object so that whenever you 
+//invoke makeCard, you get a brand new credit card.
 
   //Code Here
 
 
+let makeCard= (cardNumber,expirationDate,securityCode) => {
+  return creditCard ={
+    cardNumber,
+    expirationDate,
+    securityCode
+  }
+
+};
